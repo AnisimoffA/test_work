@@ -47,7 +47,7 @@ def test_update_data_not_found(clear_redis):
 
 # тест для проверки получения данных
 def test_check_data(clear_redis):
-    # Сначала нужно записать данные
+    # Сначала нужно подготовить данные
     redis_client.set("12345", "123 Main St")
 
     response = client.get("/check_data", params={"phone": "12345"})

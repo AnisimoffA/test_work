@@ -60,4 +60,3 @@ def test_check_data_not_found(clear_redis):
     response = client.get("/check_data", params={"phone": "99999"})
     assert response.status_code == 404
     assert response.json() == {"detail": "Data not found"}
-
